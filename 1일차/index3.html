@@ -1,0 +1,72 @@
+<!-- css box model -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문페이지</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+
+        .wrap{
+            width: 900px;
+            margin: 10px 30%;
+        }
+        .orderDetail{
+            width: 100%;
+        }
+        .orderSelect{
+            width: 50%;
+        }
+        .orderDetail{
+
+        }
+        .orderAddress{
+            width: 50%;
+
+        }
+        #itemImage{
+            width : 200px;
+            height : auto;
+            margin : 10px 20% 10px 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <img id="itemImage" src="https://img1.daumcdn.net/thumb/R720x0/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fliveboard%2Fdailylife%2F64c28216ea484ac2ac07ef70405c159b.JPG"></img>
+        <div class="itemHead">
+            <div>상품제목</div>
+            <div> 가격 1,000,000 원 / 개</div>
+        </div>
+        <div class="itemDescrition">
+            상품설명
+        </div>
+        <div class="orderDetail">
+            주문상세
+            <div class="orderName">주문자 성함 : <input type="text"></div>
+            <div class="oderNumberText">수량 :
+                <select class="orderSelect">
+                    <option selected>선택해주세요</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="addressText">주소 : <input class="orderAddress" type="text"></div>
+            <div class="phoneText">전화번호 : <input class="orderPhone" type="text"></div>
+            <div>
+                <button class="orderRequest">주문하기</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
