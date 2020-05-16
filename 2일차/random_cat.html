@@ -27,13 +27,9 @@
                 success: function (response) {
                     // response 의 type 이 list 임을 확인하자.
                     let img_src = response[0]["url"];
-                    let img_width = response[0]["width"];
-                    let img_height = response[0]["height"];
                     $('#img-cat').empty();
                     console.log(img_src);
                     $("#img-cat").attr("src", img_src);
-                    $("#img-cat").attr("width", img_width);
-                    $("#img-cat").attr("height", img_height);
                 },
             });
         }
