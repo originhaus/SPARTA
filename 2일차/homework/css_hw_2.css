@@ -1,0 +1,109 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.wrap {
+    width: 900px;
+    margin: 10px auto;
+}
+
+.mytitle {
+    color: white;
+    background-image: url('https://t1.daumcdn.net/cfile/tistory/250D1C395790B1C133');
+    background-position: center;
+    background-size: cover;
+    font-family: 'Black Han Sans', sans-serif;
+    /* border-radius: 10px; */
+    text-align: center;
+    /* padding-top: 40px; */
+}
+
+.display-4 {
+    font: 16px;
+}
+
+.editorInput {
+    margin: 10px 2px 10px 2px;
+    padding: 10px 20% 10px 20%;
+    border: solid 1px black;
+    border-radius: 4px;
+}
+
+.comment {
+    color: blue;
+    font-weight: bold;
+}
+
+div.jumbotron {
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+.h-container:after {
+    clear: both;
+    display: block;
+    content: ''
+}
+
+.h-container .price {
+    float: left;
+    text-align: left;
+    width: 250px;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0px;
+}
+
+.h-container .currency {
+    float: left;
+    text-align: left;
+    width: 250px;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0px;
+}
+
+.h-container .item {
+    float: left;
+    width: 150px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    font-size: 1.5rem;
+    /* vertical-align: bottom; */
+}
+
+.orderContainer:after {
+    clear: both;
+    display: block;
+    content: ''
+}
+
+.orderContainer .order {
+    float: left;
+    width: 200px;
+    text-align: center;
+    /* vertical-align: bottom; */
+    /* vertical-align: bottom; */
+}
+
+.h-container .itemDescription {
+    /* width: 500px; */
+    text-align: center;
+    word-break: nowrap;
+    /* text-align: left; */
+}
+
+.orderContainer .input-group {
+    float: left;
+    width: 300px;
+    text-align: center;
+}
+
+.wrap .button {
+    width: 400px;
+    margin: auto;
+}
+
+span {}
