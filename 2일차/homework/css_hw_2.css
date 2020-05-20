@@ -88,6 +88,12 @@ div.jumbotron {
     /* vertical-align: bottom; */
 }
 
+.order {
+    width: 600px;
+    text-align: center;
+    margin-left: 150px;
+}
+
 .h-container .itemDescription {
     /* width: 500px; */
     text-align: center;
@@ -95,15 +101,26 @@ div.jumbotron {
     /* text-align: left; */
 }
 
-.orderContainer .input-group {
-    float: left;
-    width: 300px;
-    text-align: center;
-}
-
 .wrap .button {
     width: 400px;
     margin: auto;
+}
+
+.orderHistory {
+    margin-top: 15px;
+    width: 600px;
+    margin-left: 160px;
+}
+
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 10px;
+    border: 1px solid rgb(179, 179, 179);
 }
 
 span {}

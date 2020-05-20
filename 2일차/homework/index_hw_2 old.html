@@ -31,18 +31,14 @@
         }
 
         function orderComplete() {
-            // id 호출 -> $("#id")
-            // class 호출 -> $(".class")
-            // name 호출 -> $("input[name=inputName]")
             let name = $('#orderName').val();
             let delivery = $('#orderDelivery').val();
             let address = $('#orderAddress').val();
             let phone = $('#orderPhone').val();
-            let phone_msg = "010-1234-5678 형식으로 입력하세요";
             if (name == '') {
                 alert("이름을 입력하세요.");
             } else {
-                if (delivery == '기간을 선택하세요...') {
+                if (delivery == '기간선택') {
                     alert("달성기간을 입력하세요.");
                 } else {
                     if (address == '') {
@@ -51,25 +47,22 @@
                         if (phone.includes('-')) {
                             let phone_num = phone.split('-');
                             if (phone_num[0] != '010') {
-                                alert(phone_msg);
+                                alert("010-1234-5678 형식으로 입력하세요.");
                             } else {
-                                if (phone_num.length != 3) {
-                                    alert(phone_msg);
-                                } else if (phone_num[1].length != 4 || phone_num[2].length != 4) {
-                                    alert(phone_msg);
+                                if (phone_num[1].length != 4 || phone_num[2].length != 4) {
+                                    alert("010-1234-5678 형식으로 입력하세요.");
                                 } else {
                                     alert("주문완료");
                                 }
                             }
                         } else {
-                            alert(phone_msg);
+                            alert("010-1234-5678 형식으로 입력하세요.");
                         }
                     }
                 }
             }
         }
     </script>
-
     <!-- style -->
     <link rel="stylesheet" type="text/css" href="./css_hw_2.css">
     <!-- Google font -->
@@ -110,39 +103,7 @@
         <div>
             <hr>
         </div>
-
-        <div class="input-group mb-3 order">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon3">주문자 성함</span>
-            </div>
-            <input id="orderName" type="text" class="form-control" aria-describedby="basic-addon3">
-        </div>
-        <div class="input-group mb-3 order">
-            <div class="input-group-prepend">
-                <label class="input-group-text" for="inputGroupSelect01">달성기간</label>
-            </div>
-            <select class="custom-select" id="orderDelivery">
-            <option selected>기간을 선택하세요...</option>
-            <option value="1">1년</option>
-            <option value="2">2년</option>
-            <option value="3">3년</option>
-            </select>
-        </div>
-        <div class="input-group mb-3 order">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon3">주소</span>
-            </div>
-            <input type="text" class="form-control" id="orderAddress" aria-describedby="basic-addon3">
-        </div>
-        <div class="input-group mb-3 order">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon3">전화번호</span>
-            </div>
-            <input type="text" class="form-control" id="orderPhone" aria-describedby="basic-addon3">
-        </div>
-
-
-        <!-- <div class="orderContainer">
+        <div class="orderContainer">
             <div class="order">주문자 성함</div>
             <div class="input-group mb-3">
                 <input id="orderName" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
@@ -161,59 +122,21 @@
                     <label class="input-group-text" for="inputGroupSelect02">달성기간을 선택해주세요</label>
                 </div>
             </div>
-        </div> -->
-        <!-- <div class="orderContainer">
+        </div>
+        <div class="orderContainer">
             <div class="order">주소</div>
             <div class="input-group mb-3">
                 <input id="orderAddress" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
             </div>
-        </div> -->
-        <!-- <div class="orderContainer">
+        </div>
+        <div class="orderContainer">
             <div class="order">전화번호</div>
             <div class="input-group mb-3">
                 <input id="orderPhone" type="text" class="form-control" aria-label="Default" aria-inputGroup-sizing-default ">
             </div>
-        </div> -->
+        </div>
         <div class="button ">
             <button onclick="orderComplete() " type="submit " class="btn btn-primary ">주문하기</button>
-        </div>
-
-        <div class="h-container">
-            <hr>
-            <div class="item">주문내역</div>
-        </div>
-        <!-- 주문내역 -->
-        <div class="orderHistory">
-            <table>
-                <thead>
-                    <tr>
-                        <td>이름</td>
-                        <td>수량</td>
-                        <td>주소</td>
-                        <td>전화번호</td>
-                    </tr>
-                </thead>
-                <tbody id="names-q1">
-                    <tr>
-                        <td>102. 망원역 1번출구 앞</td>
-                        <td>22</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>103. 망원역 2번출구 앞</td>
-                        <td>16</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>104. 합정역 1번출구 앞</td>
-                        <td>16</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
 </body>
 

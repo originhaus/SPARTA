@@ -11,12 +11,12 @@
         div.question-box {
             margin: 10px 0 20px 0;
         }
-
+        
         table {
             border: 1px solid;
             border-collapse: collapse;
         }
-
+        
         td,
         th {
             padding: 10px;
@@ -31,7 +31,7 @@
                 type: "GET",
                 url: "http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/bikeList/1/99",
                 data: {},
-                success: function (response) {
+                success: function(response) {
                     let bike_list = response["rentBikeStatus"]["row"];
                     $('#names-q1').empty();
                     for (let i = 0; i < bike_list.length; i++) {
