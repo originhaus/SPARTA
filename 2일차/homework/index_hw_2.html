@@ -59,6 +59,14 @@
                                     alert(phone_msg);
                                 } else {
                                     alert("주문완료");
+                                    let temp_html = '';
+                                    temp_html = `<tr>
+                                            <td><span style="color:red">${name}</span></td>
+                                            <td><span style="color:red">${delivery}</span></td>
+                                            <td><span style="color:red">${address}</span></td>
+                                            <td><span style="color:red">${phone}</span></td>
+                                         </tr>`;
+                                    $('#names-q1').append(temp_html);
                                 }
                             }
                         } else {
@@ -182,6 +190,9 @@
             <hr>
             <div class="item">주문내역</div>
         </div>
+        <div>
+            <hr>
+        </div>
         <!-- 주문내역 -->
         <div class="orderHistory">
             <table>
@@ -194,24 +205,6 @@
                     </tr>
                 </thead>
                 <tbody id="names-q1">
-                    <tr>
-                        <td>102. 망원역 1번출구 앞</td>
-                        <td>22</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>103. 망원역 2번출구 앞</td>
-                        <td>16</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>104. 합정역 1번출구 앞</td>
-                        <td>16</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
                 </tbody>
             </table>
         </div>
