@@ -1,4 +1,0 @@
-# this is simple vs project file
-
-
-
