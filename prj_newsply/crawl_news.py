@@ -62,6 +62,13 @@ for comment in comments:
     a = comment.select_one('p.desc_txt') # 선택된 li 구문 중에 p.desc_txt 를 찾는 것을 반복한다.
     if a is not None:
         comment = a.text.replace("\n", " ") # 줄바꿈 기호를 공백으로 바꾸고,
+        # 코멘트의 스크래핑 날짜 기준 추천순위를 나열한다. dictionary 로 ? 
+        # [{뉴스키 : 뉴스키값}, 
+        #  {날짜 : 날짜값}, 
+        #  {헤드라인 : 헤드라인값}
+        #  {조회수 : 조회수값, 코멘트 : 코멘트 내용},
+        #  {조회수 : 조회수값, 코멘트 : 코멘트 내용},
+        #  {조회수 : 조회수값, 코멘트 : 코멘트 내용}]
         print(comment)
 
 driver.close()
